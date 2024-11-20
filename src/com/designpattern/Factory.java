@@ -2,7 +2,6 @@ package com.designpattern;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -21,7 +20,7 @@ public class Factory {
         while (loop > 0) {
             String type = scanner.next();
             int quality = scanner.nextInt();
-            HashMap<String, Integer> map = new HashMap<>();
+            HashMap<String, Integer> map = new HashMap<>(1);
             map.put(type, quality);
             list.add(map);
             loop--;
