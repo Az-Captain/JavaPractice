@@ -29,8 +29,10 @@ public class BuilderModePattern {
                 bikeBuilder = new RoadBikeBuilder();
             }
 
-            bikeDirector.construct(bikeBuilder);
-            Bike bike = bikeBuilder.getBike();
+            Bike bike = null;
+            if (bikeBuilder != null) {
+                bike = bikeDirector.construct(bikeBuilder);
+            }
             System.out.println(bike);
         }
     }
