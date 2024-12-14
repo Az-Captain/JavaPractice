@@ -30,6 +30,13 @@ interface USB2{
     void chargeWithUSB();
 }
 
+class USBCharger implements USB2{
+    @Override
+    public void chargeWithUSB() {
+        System.out.println("USB Adapter");
+    }
+}
+
 interface TypeC2{
     void chargeWithTypeC();
 }
@@ -38,13 +45,6 @@ class Computer2 implements TypeC2{
     @Override
     public void chargeWithTypeC() {
         System.out.println("TypeC");
-    }
-}
-
-class USBCharger implements USB2{
-    @Override
-    public void chargeWithUSB() {
-        System.out.println("USB Adapter");
     }
 }
 
