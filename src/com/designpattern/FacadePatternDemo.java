@@ -67,9 +67,9 @@ class Television implements Device {
 }
 
 class Facade {
-    private AirConditioner airConditioner;
-    private DeskLamp deskLamp;
-    private Television television;
+    private final AirConditioner airConditioner;
+    private final DeskLamp deskLamp;
+    private final Television television;
 
     public Facade() {
         airConditioner = new AirConditioner();
