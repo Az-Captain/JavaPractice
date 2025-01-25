@@ -80,11 +80,19 @@ class ConcreteShape implements ShapeDraw {
 class ShapeDrawFactory {
     private HashMap<ShapeType, ShapeDraw> shapes = new HashMap<>();
 
+    //    public ShapeDraw getShape(ShapeType type) {
+//        if (!shapes.containsKey(type)) {
+//            shapes.put(type, new ConcreteShape(type));
+//        }
+//        return shapes.get(type);
+//    }
     public ShapeDraw getShape(ShapeType type) {
-        if (!shapes.containsKey(type)) {
-            shapes.put(type, new ConcreteShape(type));
-
+        if (shapes.containsKey(type)) {
+            return shapes.get(type);
         }
-        return shapes.get(type);
+
+        ConcreteShape shape = new ConcreteShape(type);
+        shapes.put(type, shape);
+        return shape;
     }
 }
