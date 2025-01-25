@@ -32,11 +32,11 @@ public class StrategyPattern {
             int price = Integer.parseInt(split[0]);
             if ("1".equals(split[1])) {
                 strategy = new Discount();
-                System.out.println(strategy.getRes(price));
             } else if ("2".equals(split[1])) {
                 strategy = new FullReduction();
-                System.out.println(strategy.getRes(price));
             }
+            Context context = new Context(strategy);
+            System.out.println(context.giveDiscount(price));
         }
     }
 }
