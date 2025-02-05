@@ -67,6 +67,4 @@ class RollCall implements Container {
             return null;
         }
     }
-
-
 }
